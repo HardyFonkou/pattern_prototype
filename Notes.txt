@@ -1,0 +1,40 @@
+Prototype C'est quoi ?
+    Créer des objets à partir d'un objet sans rendre le code dépendant de la classe des objets en question
+
+Problème ?
+    On veut une copie exacte d'un objet
+
+    Réflexe : créer un nouveau objet et lui affecter les propriétés du prototype
+    Problème :
+        comment on fait des propriétés privées ???
+        Le code est dépendant de la classe, hummm !
+        Et si on ne connait que l'interface implémentée et pas la classe elle même ? Et qu'une méthode n'accepte que les objet qui implémente cette interface ? Hummm !
+
+Résolution :
+    Le design pattern prototype
+    Il délègue le processus de clonage à l'objets qui doit être copié (au prototype)
+
+    Comment ?
+        Interface commune pour tous les objets qui vont être clonés
+    Pourquoi ?
+        Cloner les objets sans coupler le code à la classe de l'objet
+    Implémentation ?
+        En général cette classe possède une seule méthode : clone()
+        Son implémentation se ressemble dans toutes les classes
+        Elle créé un nouveau objet de la classe et reporte les valeurs de l'objet courant dans le nouveau
+        Du coup on peut également copier les propriétés privées
+    Mais pourquoi cloner de cette façon ?
+        Lorsque le prototype possède des dizaines d'attributs et des centaines de configurations possibles par exemple, ça devient un avantage
+        Le clonage est une alternative au sous-classage
+
+Avantages :
+    Cloner des objets sans les coupler avec leur classe concrète
+    Se débarraser des codes d'initialisation redondant en clonant des prototypes préconstruits
+    Créer des objets complexes plus facilement
+    Une alternative à l'héritage pour gérer les modèles de configuration d'objets complexes
+
+Inconvénients :
+    Cloner des objets complexes dotés de références circulaires peut se révéler très difficile.
+
+
+Exemple dans la vie réelle : La mitose (division cellulaire). La cellule originale est le prototype et joue un rôle actif dans la création de sa copie
