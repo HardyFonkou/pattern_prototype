@@ -35,6 +35,7 @@ Avantages :
 
 Inconvénients :
     Cloner des objets complexes dotés de références circulaires peut se révéler très difficile.
+    La profondeur du clonage des composants à effectuer peut dépendre du contexte d'utilisation.
 
 
 Exemple dans la vie réelle : La mitose (division cellulaire). La cellule originale est le prototype et joue un rôle actif dans la création de sa copie
