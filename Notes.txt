@@ -34,6 +34,7 @@ Avantages :
     Une alternative à l'héritage pour gérer les modèles de configuration d'objets complexes
 
 Inconvénients :
+    L'implantation peut s'avérer difficile s'il existe des objets qui ne peuvent pas être cloné
     Cloner des objets complexes dotés de références circulaires peut se révéler très difficile.
     La profondeur du clonage des composants à effectuer peut dépendre du contexte d'utilisation.
 
